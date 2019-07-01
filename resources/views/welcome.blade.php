@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    HENSHIN
+                    HENSHIN 10
                 </div>
 
                 <div class="links">
