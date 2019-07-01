@@ -1,0 +1,14 @@
+.backg-login{
+    background: url("../img/bnpb.jpg");
+    height: 500px;
+    width: 500px;
+    background-position: center;
+    background-size: cover;
+}
+.backg-regist{
+    background: url("../img/registrasi.jpg");
+    height: 600px;
+    width: 600px;
+    background-position: center;
+    background-size: cover;
+}
