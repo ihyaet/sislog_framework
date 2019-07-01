@@ -33,11 +33,52 @@
         </p>
       </div>
       <div class="row justify-content-center">
-        <div class="col-lg-6 text-center">
+        <div class="col-lg-6 text-right">
            <a href="" style="border-radius: 20px;" class="btn btn-info btn-user text-center">Kelola Gudang</a>
+        </div>
+        <div class="col-lg-6">
+           <a href="" style="border-radius: 20px;" class="btn btn-info btn-user text-center">Laporan TRC</a>
         </div>
       </div>
     </div>
+
+    <section class="bg-gray-100">
+    <div class="container">
+      <div class="row justify-content-center">
+      <p class="m-4"><strong><font>AKTOR</font></strong></p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col justify-content-center">
+              <img src="img/BPBD.png" style="height:365px; width:500px;">
+        </div>
+        <div class="col justify-content-center">
+            <h5 class="mt-3" style="font-weight: bold;">BPBD</h5>
+        <p>Badan Penanggulangan Bencana Daerah (BPBD) adalah
+         lembaga pemerintah non-departemen yang melaksanakan tugas penanggulangan bencana di daerah baik 
+         Provinsi maupun Kabupaten/ Kota dengan berpedoman pada kebijakan yang ditetapkan oleh Badan Nasional 
+         Penanggulangan Bencana. BPBD dibentuk berdasarkan Peraturan Presiden Nomor 8 Tahun 2008, menggantikan
+          Satuan Koordinasi Pelaksana Penanganan Bencana (Satkorlak) di tingkat Provinsi dan Satuan Pelaksana 
+          Penanganan Bencana (Satlak PB) di tingkat Kabupaten / Kota, yang keduanya dibentuk berdasarkan Peraturan 
+          Presiden Nomor 83 Tahun 2005.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center pb-5">
+            <div class="col justify-content-center">
+              <h5 class="mt-3" style="font-weight: bold;">TIM REAKSI CEPAT (TRC)</h5>
+              <p>Tim Reaksi Cepat BNPB disingkat TRC BNPB adalah suatu Tim yang dibentuk oleh Kepala BNPB, terdiri dari instansi/lembaga teknis/non teknis terkait yang bertugas 
+              melaksanakan kegiatan kaji cepat bencana dan dampak bencana 
+              pada saat tanggap darurat meliputi penilaian kebutuhan 
+              (Needs Assessment), penilaian kerusakan dan kerugian 
+              (Damage and Loses Assessment) serta memberikan dukungan pendampingan (membantu SATKORLAK PB/BPBD Provinsi/ 
+              SATLAK PB/BPBD Kabupaten/Kota) dalam penanganan darurat bencana. 
+              </p>
+            </div>
+            <div class="col justify-content-center">
+              <img src="img/trc.jpeg" style="height: 350px;">
+            </div>
+      </div>
+    </div>
+  </section>
 
     <section class="bg-white">
       <div class="container">
