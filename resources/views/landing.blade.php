@@ -22,8 +22,8 @@
 
 <body>
 
-  <div class="container-full-bg shadow">
-    <div class="jumbotron">
+  <div class="container-full-bg">
+    <div class="jumbotron shadow">
       <div class="row justify-content-center m-0 p-0">
          <img src="img/bnpb.png" style="height: 350x; width: 350px;">
       </div>
@@ -46,7 +46,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col">
-              <div class="card shadow mb-4">
+              <div class="card mb-4" id="card-profil">
                 <div class="card-body">
                   <div class="row justify-content-center">
                     <img src="https://instagram.fcgk16-1.fna.fbcdn.net/vp/e297811a7dbc88118b0833dd91cb44af/5DC1B0FE/t51.2885-15/e35/43653367_543410486124558_3114722360144129502_n.jpg?_nc_ht=instagram.fcgk16-1.fna.fbcdn.net" class="rounded-circle mt-0" style="width: 180px; height: 180px;">
@@ -59,7 +59,7 @@
               </div>
             </div>
             <div class="col">
-                  <div class="card shadow mb-4">
+                  <div class="card mb-4" id="card-profil">
                 <div class="card-body">
                   <div class="row justify-content-center">
                     <img src="https://scontent-sin6-2.cdninstagram.com/vp/85f09dadd3b46e851ffaa0808fe6fbab/5DB48F6D/t51.2885-19/s150x150/43051264_272845183589257_3694189181895966720_n.jpg?_nc_ht=scontent-sin6-2.cdninstagram.com" class="rounded-circle mt-0" style="width: 180px; height: 180px;">
@@ -72,7 +72,7 @@
               </div>
             </div>
             <div class="col">
-                <div class="card shadow mb-4">
+                <div class="card mb-4" id="card-profil">
                 <div class="card-body">
                   <div class="row justify-content-center">
                     <img src="https://scontent-sin6-2.cdninstagram.com/vp/07376f2e58ce2cec72e92e14c817bc18/5DAD721E/t51.2885-19/s150x150/64281386_438520696725975_6252362189764558848_n.jpg?_nc_ht=scontent-sin6-2.cdninstagram.com" class="rounded-circle mt-0" style="width: 180px; height: 180px;">
@@ -85,7 +85,7 @@
               </div>
             </div>
             <div class="col">
-                <div class="card shadow mb-4">
+                <div class="card mb-4" id="card-profil">
                 <div class="card-body">
                   <div class="row justify-content-center">
                     <img src="https://scontent-sin6-2.cdninstagram.com/vp/26e8de27ca9ee96f60dcf0a12b159078/5DB922E0/t51.2885-15/sh0.08/e35/s750x750/60224039_414013802660682_4813467983225204121_n.jpg?_nc_ht=scontent-sin6-2.cdninstagram.com" class="rounded-circle mt-0" style="width: 180px; height: 180px;">

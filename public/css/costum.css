@@ -13,3 +13,7 @@
     height: 657px;
 	background-attachment: fixed;
 }
+#card-profil:hover{
+    transition: 0.3s;
+    box-shadow: 2px 2px 2px 2px grey;
+}
