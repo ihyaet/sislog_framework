@@ -5,10 +5,11 @@
     background-position: center;
     background-size: cover;
 }
-.backg-regist{
-    background: url("../img/registrasi.jpg");
-    height: 600px;
-    width: 600px;
-    background-position: center;
+.jumbotron{
+    background-image: url("../img/bg_logistik.jpg");
     background-size: cover;
+    border-radius: 0px;	
+    margin-bottom: 0px;
+    height: 657px;
+	background-attachment: fixed;
 }
