@@ -10,16 +10,25 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'pages_controller@landing');
 
-Route::get('/', function () {
-    return view('landing');
-});
 Route::get('login', function () {
     return view('login');
 });
+
 Route::get('register', function () {
     return view('register');
 });
-Route::get('landing', function () {
-    return view('landing');
+
+Route::get('input_masuk', function () {
+    return view('pusdalops.input_masuk');
 });
+
+Route::get('gudang', function () {
+    return view('pusdalops.lihat_gudang');
+});
+
+Route::get('input_laporan', function () {
+    return view('trc.input_laporan');
+});
+
