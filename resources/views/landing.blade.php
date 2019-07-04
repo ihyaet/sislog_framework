@@ -33,11 +33,8 @@
         </p>
       </div>
       <div class="row justify-content-center">
-        <div class="col-lg-6 text-right">
-           <a href="{{route('login')}}" style="border-radius: 20px;" class="btn btn-info btn-user text-center">Kelola Gudang</a>
-        </div>
-        <div class="col-lg-6">
-           <a href="{{route('login')}}" style="border-radius: 20px;" class="btn btn-info btn-user text-center">Laporan TRC</a>
+        <div class="col-lg-6 text-center">
+           <a href="{{route('login')}}" style="border-radius: 20px;" class="btn btn-info btn-user text-center">LOGIN</a>
         </div>
       </div>
     </div>
