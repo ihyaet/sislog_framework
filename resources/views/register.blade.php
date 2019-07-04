@@ -60,7 +60,7 @@
               </form>
               <hr>
               <div class="text-center">
-                <a class="small " style="color: teal;" href="login.html">Sudah punya akun? Login!</a>
+                <a class="small " style="color: teal;" href="{{route('login')}}">Sudah punya akun? Login!</a>
               </div>
             </div>
           </div>

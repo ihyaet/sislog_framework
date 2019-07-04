@@ -10,16 +10,34 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// GENERAL
+Route::get('/', 'pages_controller@landing');
+Route::get('/login', 'pages_controller@login')->name('login');
+Route::get('/register', 'pages_controller@register')->name('register');
 
-Route::get('/', function () {
-    return view('landing');
+// PUSDALOPS
+Route::get('/lihat_laporan', 'pages_controller@lihat_laporan');
+Route::get('input_masuk', function () {
+    return view('pusdalops.input_masuk');
 });
-Route::get('login', function () {
-    return view('login');
+Route::get('gudang', function () {
+    return view('pusdalops.lihat_gudang');
 });
-Route::get('register', function () {
-    return view('register');
+Route::get('dashboard', function () {
+    return view('pusdalops.dashboard');
 });
-Route::get('landing', function () {
-    return view('landing');
+Route::get('laporan_admin', function () {
+    return view('pusdalops.laporan_admin');
 });
+Route::get('riwayat_masuk', function () {
+    return view('pusdalops.riwayat_masuk');
+});
+
+// TRC
+Route::get('input_laporan', function () {
+    return view('trc.input_laporan');
+});
+Route::get('laporan_trc', function () {
+    return view('trc.laporan_trc');
+});
+
