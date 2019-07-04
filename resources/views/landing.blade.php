@@ -34,10 +34,10 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-lg-6 text-right">
-           <a href="" style="border-radius: 20px;" class="btn btn-info btn-user text-center">Kelola Gudang</a>
+           <a href="{{route('login')}}" style="border-radius: 20px;" class="btn btn-info btn-user text-center">Kelola Gudang</a>
         </div>
         <div class="col-lg-6">
-           <a href="" style="border-radius: 20px;" class="btn btn-info btn-user text-center">Laporan TRC</a>
+           <a href="{{route('login')}}" style="border-radius: 20px;" class="btn btn-info btn-user text-center">Laporan TRC</a>
         </div>
       </div>
     </div>

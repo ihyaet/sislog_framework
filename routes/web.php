@@ -12,8 +12,8 @@
 */
 // GENERAL
 Route::get('/', 'pages_controller@landing');
-Route::get('/login', 'pages_controller@login');
-Route::get('/register', 'pages_controller@register');
+Route::get('/login', 'pages_controller@login')->name('login');
+Route::get('/register', 'pages_controller@register')->name('register');
 
 // PUSDALOPS
 Route::get('/lihat_laporan', 'pages_controller@lihat_laporan');
