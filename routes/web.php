@@ -28,3 +28,7 @@ Route::get('statistik', 'pages_controller@statistik')->name('statistik');
 Route::get('input_laporan', 'pages_controller@input_laporan')->name('input_laporan');
 Route::get('laporan_trc', 'pages_controller@laporan_trc')->name('laporan_trc');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

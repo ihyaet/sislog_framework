@@ -47,7 +47,7 @@
                         <th>Gambar</th>
                         <th>Desa</th>
                         <th>Kecamatan</th>
-                        <!-- <th></th> -->
+                        <th>Status</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -60,6 +60,7 @@
                         <td>$163,500</td>
                         <td>$163,500</td>
                         <td>$163,500</td>
+                        <td>Diterima</td>
                       </tr>
                       <tr>
                         <td>2</td>
@@ -70,6 +71,7 @@
                         <td>$139,575</td>
                         <td>$163,500</td>
                         <td>$163,500</td>
+                        <td>Ditolak</td>
                       </tr>
                     </tbody>
                   </table>
