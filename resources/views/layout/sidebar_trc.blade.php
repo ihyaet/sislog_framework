@@ -22,14 +22,14 @@
 
       <!-- Nav Item Laporan -->
       <li class="nav-item">
-          <a class="nav-link" href="charts.html">
+      <a class="nav-link" href="{{route('input_laporan')}}">
             <i class="fa fa-list-alt"></i>
             <span>Lapor</span></a>
         </li>
   
            <!-- Nav Item Laporan -->
            <li class="nav-item">
-              <a class="nav-link" href="charts.html">
+              <a class="nav-link" href="{{route('laporan_trc')}}">
                 <i class="fa fa-th-list"></i>
                 <span>Laporan</span></a>
             </li>

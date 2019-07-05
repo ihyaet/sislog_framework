@@ -19,6 +19,9 @@ class pages_controller extends Controller
     }
 
     // PUSDALOPS
+    public function dashboard(){
+        return view('pusdalops.dashboard');
+    }
     public function lihat_laporan(){
         return view('pusdalops.laporan_admin');
     }
@@ -39,4 +42,10 @@ class pages_controller extends Controller
     }
     
     // TRC
+    public function input_laporan(){
+        return view('trc.input_laporan');
+    }
+    public function laporan_trc(){
+        return view('trc.laporan_trc');
+    }
 }
