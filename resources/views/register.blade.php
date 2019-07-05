@@ -20,11 +20,8 @@
                     <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="Nama Depan">
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Nama Belakang">
+                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email">
                   </div>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email">
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">

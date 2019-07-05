@@ -14,9 +14,9 @@ class pages_controller extends Controller
     public function login(){
         return view('login');
     }
-    // public function register(){
-    //     return view('register');
-    // }
+    public function register(){
+        return view('register');
+    }
 
     // PUSDALOPS
     public function dashboard(){

@@ -12,8 +12,8 @@
 */
 // GENERAL
 Route::get('/', 'pages_controller@landing');
-// Route::get('/login', 'pages_controller@login')->name('login');
-// Route::get('/register', 'pages_controller@register')->name('register');
+Route::get('/login', 'pages_controller@login')->name('login');
+Route::get('/register', 'pages_controller@register')->name('register');
 
 // PUSDALOPS
 Route::get('dashboard', 'pages_controller@dashboard')->name('dashboard');
@@ -33,10 +33,3 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
