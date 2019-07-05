@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // return view('trc.laporan_trc');
         return view('home');
     }
 }

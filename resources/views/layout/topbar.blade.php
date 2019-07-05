@@ -32,7 +32,7 @@
   <!-- Nav Item - User Information -->
   <li class="nav-item dropdown no-arrow">
     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="mr-2 d-none d-lg-inline text-gray-600 small">Ihya Fathurr</span>
+      <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
       <img class="img-profile rounded-circle" src="https://instagram.fcgk8-2.fna.fbcdn.net/vp/1933052f97cf7847ddceee9fe08c28fd/5D88E11B/t51.2885-15/sh0.08/e35/s640x640/43653367_543410486124558_3114722360144129502_n.jpg?_nc_ht=instagram.fcgk8-2.fna.fbcdn.net&_nc_cat=106">
     </a>
     <!-- Dropdown - User Information -->

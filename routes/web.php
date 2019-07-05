@@ -11,9 +11,9 @@
 |
 */
 // GENERAL
-Route::get('/', 'pages_controller@landing');
-Route::get('/login', 'pages_controller@login')->name('login');
-Route::get('/register', 'pages_controller@register')->name('register');
+// Route::get('/', 'pages_controller@landing');
+// Route::get('/login', 'pages_controller@login')->name('login');
+// Route::get('/register', 'pages_controller@register')->name('register');
 
 // PUSDALOPS
 Route::get('dashboard', 'pages_controller@dashboard')->name('dashboard');
@@ -28,6 +28,9 @@ Route::get('statistik', 'pages_controller@statistik')->name('statistik');
 Route::get('input_laporan', 'pages_controller@input_laporan')->name('input_laporan');
 Route::get('laporan_trc', 'pages_controller@laporan_trc')->name('laporan_trc');
 
+Route::get ('/', function(){
+    return view('welcome');
+});
 
 Auth::routes();
 
