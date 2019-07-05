@@ -16,19 +16,12 @@ Route::get('/login', 'pages_controller@login')->name('login');
 Route::get('/register', 'pages_controller@register')->name('register');
 
 // PUSDALOPS
-Route::get('/lihat_laporan', 'pages_controller@lihat_laporan')->name('lihat_laporan');
+Route::get('lihat_laporan', 'pages_controller@lihat_laporan')->name('lihat_laporan');
 Route::get('input_data', 'pages_controller@input_data')->name('input_data');
 Route::get('lihat_gudang', 'pages_controller@lihat_gudang')->name('lihat_gudang');
-
-Route::get('dashboard', function () {
-    return view('pusdalops.dashboard');
-});
-Route::get('laporan_admin', function () {
-    return view('pusdalops.laporan_admin');
-});
-Route::get('riwayat_masuk', function () {
-    return view('pusdalops.riwayat_masuk');
-});
+Route::get('riwayat_masuk', 'pages_controller@riwayat_masuk')->name('riwayat_masuk');
+Route::get('riwayat_keluar', 'pages_controller@riwayat_keluar')->name('riwayat_keluar');
+Route::get('statistik', 'pages_controller@statistik')->name('statistik');
 
 // TRC
 Route::get('input_laporan', function () {
