@@ -1,3 +1,4 @@
+<title>Sislog-Register</title>
 @extends('layout.app')
 
 <body class="bg-gradient-info">
