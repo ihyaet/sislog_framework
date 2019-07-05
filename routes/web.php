@@ -36,3 +36,18 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::group(['middleware' => ['web','auth']], function(){
+    Route::get('/',function(){
+        if (Auth::user()->admin==0){
+            return view('trc.input_laporan');
+        }else{
+            $users['user'] = App\User::all();
+            return view('pusdalops.dashboard', $users);
+        }
+        // return view('welcome');
+    });
+
+    // Route::get('/home',function(){
+        
+    // });
+});

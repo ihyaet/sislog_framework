@@ -33,19 +33,17 @@
   <li class="nav-item dropdown no-arrow">
     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
-      <img class="img-profile rounded-circle" src="https://instagram.fcgk8-2.fna.fbcdn.net/vp/1933052f97cf7847ddceee9fe08c28fd/5D88E11B/t51.2885-15/sh0.08/e35/s640x640/43653367_543410486124558_3114722360144129502_n.jpg?_nc_ht=instagram.fcgk8-2.fna.fbcdn.net&_nc_cat=106">
+      <img class="img-profile rounded-circle" src="img/user.png">
     </a>
     <!-- Dropdown - User Information -->
     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-      <a class="dropdown-item" href="#">
-        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-        Profile
+      <a class="dropdown-item" href="{{ route('logout') }}"
+          onclick="event.preventDefault();
+          document.getElementById('logout-form').submit();">
+          {{ __('Logout') }}
       </a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-        Logout
-      </a>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+       @csrf
     </div>
   </li>
 
