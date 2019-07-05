@@ -73,29 +73,9 @@
                                       <textarea class="form-control" placeholder="Keterangan"></textarea>
                                   </div>
                             </div>
-                            <div class="form-group row">
-                              <div class="col-sm-6 mb-3 mb-sm-0">
-                                <h5>Bantuan Logistik</h5>
-                              </div>
-                            </div>
                               <div class="form-group row">
-                                  <div class="col-sm-6 mb-3 mb-sm-0">
-                                      <h6>Barang</h6>
-                                   </div>
-                                   <div class="col-sm-6">
-                                       <h6>Kuantitas</h6>
-                                   </div>
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <select class="form-control" id="sel1">
-                                        <option>Pilih Barang</option>
-                                        <option>Mie Instan</option>
-                                        <option>Minyak Goreng</option>
-                                        <option>Susu Bayi</option>
-                                      </select> 
-                                </div>
-                                <div class="col-sm-6">
-                                    <input type="text"class="form-control" placeholder="Kuantitas">
-                                </div>
+                                      <h6>Rincian Logistik</h6>
+                                      <textarea class="form-control" placeholder="logistik.."></textarea>
                             </div>
                             <a href="" class="btn btn-success  btn-block">Submit</a>
                           </form>

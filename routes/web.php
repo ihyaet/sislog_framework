@@ -16,13 +16,10 @@ Route::get('/login', 'pages_controller@login')->name('login');
 Route::get('/register', 'pages_controller@register')->name('register');
 
 // PUSDALOPS
-Route::get('/lihat_laporan', 'pages_controller@lihat_laporan');
-Route::get('input_masuk', function () {
-    return view('pusdalops.input_masuk');
-});
-Route::get('gudang', function () {
-    return view('pusdalops.lihat_gudang');
-});
+Route::get('/lihat_laporan', 'pages_controller@lihat_laporan')->name('lihat_laporan');
+Route::get('input_data', 'pages_controller@input_data')->name('input_data');
+Route::get('lihat_gudang', 'pages_controller@lihat_gudang')->name('lihat_gudang');
+
 Route::get('dashboard', function () {
     return view('pusdalops.dashboard');
 });
