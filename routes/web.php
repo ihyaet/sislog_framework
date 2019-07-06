@@ -26,9 +26,9 @@ Route::get('statistik', 'pages_controller@statistik')->name('statistik');
 Route::get('input_laporan', 'pages_controller@input_laporan')->name('input_laporan');
 Route::get('laporan_trc', 'pages_controller@laporan_trc')->name('laporan_trc');
 
-// Route::get ('/', function(){
-//     return view('landing');
-// });
+Route::get ('/', function(){
+    return view('landing');
+});
 
 Auth::routes();
 
