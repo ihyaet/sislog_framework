@@ -36,7 +36,7 @@
   
            <!-- Nav Item Laporan -->
            <li class="nav-item">
-              <a class="nav-link" href="{{route('lihat_laporan')}}">
+              <a class="nav-link" href="{{route('laporan.index')}}">
                 <i class="fa fa-th-list"></i>
                 <span>Laporan</span></a>
             </li>

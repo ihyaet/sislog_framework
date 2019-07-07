@@ -16,11 +16,22 @@ class LaporanController extends Controller
      */
     public function index(request $request)
     {
-       $laporans = DB::table('laporans')
+        $mun = Auth::id();
+    
+
+        $admin = Auth::user()->admin;
+        if($admin==1){
+            $laporans = DB::table('laporans')
             ->select(DB::raw('*'))
             ->get();
-
-        return view('trc.laporan_trc',compact('laporans'));
+            return view('pusdalops.laporan_admin',compact('laporans'));
+        }else{
+            $laporans = DB::table('laporans')
+            ->select(DB::raw('*'))
+            ->where('id_trc',$mun)
+            ->get();
+            return view('trc.laporan_trc',compact('laporans'));   
+        }
     }
 
     /**

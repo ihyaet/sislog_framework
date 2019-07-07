@@ -20,9 +20,6 @@
                     <h6 class="m-0 font-weight-bold text-info">Laporan Anda</h6>
                   </div>
                   <div class="card-body">
-                    
-                  
-
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
                           <thead class="text-center">
@@ -39,10 +36,12 @@
                             </tr>
                           </thead>  
                           <tbody>
-
+                          
+                            {{$i = 1}}
                           @foreach ($laporans as $laporan)
                             <tr>
-                              <td class="text-center">1</td>
+                            <td class="text-center">{{$i}}</td>
+                            {{$i++}}  
                               <td>{{$laporan->nama_laporan}}</td>
                               <td>{{$laporan->tanggal}}</td>
                               <td>{{$laporan->keterangan}}</td>

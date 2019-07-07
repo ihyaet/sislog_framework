@@ -35,47 +35,44 @@
                 <h6 class="m-0 font-weight-bold text-primary">Laporan Anda</h6>
               </div> -->
               <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                      <tr>
-                        <th>No</th>
-                        <th>Judul</th>
-                        <th>Tanggal</th>
-                        <th>Keterangan</th>
-                        <th>Jumlah Korban</th>
-                        <th>Gambar</th>
-                        <th>Desa</th>
-                        <th>Kecamatan</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Software Engineer</td>
-                        <td>London</td>
-                        <td>38</td>
-                        <td>2011/05/03</td>
-                        <td>$163,500</td>
-                        <td>$163,500</td>
-                        <td>$163,500</td>
-                        <td>Diterima</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Support Engineer</td>
-                        <td>Tokyo</td>
-                        <td>37</td>
-                        <td>2009/08/19</td>
-                        <td>$139,575</td>
-                        <td>$163,500</td>
-                        <td>$163,500</td>
-                        <td>Ditolak</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                  <div class="table-responsive">
+                      <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
+                        <thead class="text-center">
+                          <tr>
+                            <th class="text-center">No</th>
+                            <th>Laporan</th>
+                            <th>Tanggal</th>
+                            <th>Keterangan</th>
+                            <th>Jumlah Korban</th>
+                            <th>Lokasi</th>
+                            <th>Logistik</th>
+                            <th>Gambar</th>
+                            <th>Pelapor</th>
+                            <th>Status Laporan</th>
+                          </tr>
+                        </thead>  
+                        <tbody>
+                        
+                          {{$i = 1}}
+                        @foreach ($laporans as $laporan)
+                          <tr>
+                          <td class="text-center">{{$i}}</td>
+                          {{$i++}}  
+                            <td>{{$laporan->nama_laporan}}</td>
+                            <td>{{$laporan->tanggal}}</td>
+                            <td>{{$laporan->keterangan}}</td>
+                            <td>{{$laporan->jumlah_korban}}</td>
+                            <td>{{$laporan->lokasi}}</td>
+                            <td>{{$laporan->logistik}}</td>
+                            <td><img class="card-img-top" src="/storage/gambar/{{$laporan->gambar}}" alt="tidak ada gambar" style="height: 200px; width:300px;"></td>
+                            <th></th>
+                            <td>{{$laporan->status_laporan}}</td>
+                          </tr>
+                          @endforeach
+
+                        </tbody>
+                      </table>
+                    </div>
               </div>
             </div>
   
