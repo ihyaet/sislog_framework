@@ -26,19 +26,22 @@
                     <div class="row">
                       <div class="col-lg">
                         <div class="p-5">
-                          <form class="user"> 
+                          
+                          <form class="user" method="post" action="{{ route('laporan.store') }}" name="add_laporan" id="add_laporan" enctype="multipart/form-data"> 
+                            @csrf
+
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <h6>Judul</h6>
+                                    <h6>Laporan</h6>
                                  </div>
                                  <div class="col-sm-6">
                                      <h6>Tanggal</h6>
                                  </div>
                               <div class="col-sm-6 mb-3 mb-sm-0">
-                                 <input class="form-control" type="text" name="" placeholder="Judul Laporan" >
+                                 <input class="form-control" type="text" name="nama_laporan" id="nama_laporan" placeholder="Nama Laporan" >
                               </div>
                               <div class="col-sm-6">
-                                  <input type="date" class="form-control" id="exampleLastName">
+                                  <input type="date" class="form-control" name="tanggal" id="tanggal">
                               </div>
                             </div>
                             <div class="form-group row">
@@ -49,10 +52,10 @@
                                      <h6>Jumlah</h6>
                                  </div>
                               <div class="col-sm-6 mb-3 mb-sm-0">
-                                  <input type="text" name=""class="form-control" placeholder="Lokasi Bencana">
+                                <textarea class="form-control" placeholder="Lokasi Bencana" name="lokasi" id=lokasi></textarea>
                               </div>
                               <div class="col-sm-6">
-                                  <input type="text"class="form-control" placeholder="Jumlah Korban">
+                                  <input type="text"class="form-control" placeholder="Jumlah Korban" name="jumlah_korban" id="jumlah_korban">
                               </div>
                             </div>
                             <div class="form-group row">
@@ -64,21 +67,22 @@
                                  </div>
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                                        <label class="custom-file-label" for="validatedCustomFile">Pilih File</label>
-                                        <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                        <input type="file" class="custom-file-input" name="gambar" id="gambar" required>
+                                        <label class="custom-file-label" for="validatedCustomFile">Pilih File (max 2MB)</label>
                                       </div>
                                   </div>
                                   <div class="col-sm-6">
-                                      <textarea class="form-control" placeholder="Keterangan"></textarea>
+                                      <textarea class="form-control" placeholder="Keterangan" name="keterangan" id="keterangan"></textarea>
                                   </div>
                             </div>
-                              <div class="form-group row">
-                                      <h6>Rincian Logistik</h6>
-                                      <textarea class="form-control" placeholder="logistik.."></textarea>
+                              <div class="form-group">
+                                      <h6>Logistik</h6>
+                                      <textarea class="form-control" placeholder="Rincian Logistik" name="logistik" id="logistik"></textarea>
                             </div>
-                            <a href="" class="btn btn-success  btn-block">Submit</a>
+                            <input type="submit" class="btn btn-info btn-block" value="Submit">
                           </form>
+
+
                         </div>
                       </div>
                     </div>
@@ -113,25 +117,6 @@
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fas fa-angle-up"></i>
     </a>
-  
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-info" href="login.html">Logout</a>
-          </div>
-        </div>
-      </div>
-    </div>
   
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

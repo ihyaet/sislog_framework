@@ -15,10 +15,21 @@ class User extends Authenticatable
      *
      * @var array
      */
+    public function laporan(){
+        return $this->hasMany('App/Laporan');
+    }
+    
     protected $fillable = [
         'name', 'email', 'password','admin',
     ];
 
+    // public function authorizeRole(){
+    //     if('admin'== 0){
+    //        return view('trc.laporan');
+    //     }else{
+    //         abort(401,'You Have To Login As TRC');
+    //     }
+    //  }
     /**
      * The attributes that should be hidden for arrays.
      *

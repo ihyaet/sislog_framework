@@ -47,3 +47,5 @@ Route::group(['middleware' => ['web','auth']], function(){
         
     // });
 });
+
+Route::resource('laporan','LaporanController');

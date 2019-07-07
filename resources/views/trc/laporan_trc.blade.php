@@ -1,7 +1,7 @@
 <title>TRC-Laporan Anda</title>
 @extends('layout.app')
 
-  @section('content')
+@section('content')
       
   <!-- Page Wrapper -->
   <div id="wrapper">
@@ -20,35 +20,46 @@
                     <h6 class="m-0 font-weight-bold text-info">Laporan Anda</h6>
                   </div>
                   <div class="card-body">
+                    
+                  
+
                     <div class="table-responsive">
-                      <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
-                        <thead class="text-center">
-                          <tr>
-                            <th class="text-center">No</th>
-                            <th>Judul</th>
-                            <th>Tanggal</th>
-                            <th>Keterangan</th>
-                            <th>Jumlah Korban</th>
-                            <th>Gambar</th>
-                            <th>Desa</th>
-                            <th>Kecamatan</th>
-                          </tr>
-                        </thead>  
-                        <tbody>
-                          <tr>
-                            <td class="text-center">1</td>
-                            <td>Longsor</td>
-                            <td>2011/05/03</td>
-                            <td>London</td>
-                            <td>38</td>
-                            <td>dqoiasf.jpg</td>
-                            <td>$163,500</td>
-                            <td>DImana</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                        <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
+                          <thead class="text-center">
+                            <tr>
+                              <th class="text-center">No</th>
+                              <th>Laporan</th>
+                              <th>Tanggal</th>
+                              <th>Keterangan</th>
+                              <th>Jumlah Korban</th>
+                              <th>Lokasi</th>
+                              <th>Logistik</th>
+                              <th>Gambar</th>
+                              <th>Status Laporan</th>
+                            </tr>
+                          </thead>  
+                          <tbody>
+
+                          @foreach ($laporans as $laporan)
+                            <tr>
+                              <td class="text-center">1</td>
+                              <td>{{$laporan->nama_laporan}}</td>
+                              <td>{{$laporan->tanggal}}</td>
+                              <td>{{$laporan->keterangan}}</td>
+                              <td>{{$laporan->jumlah_korban}}</td>
+                              <td>{{$laporan->lokasi}}</td>
+                              <td>{{$laporan->logistik}}</td>
+                              <td><img class="card-img-top" src="/storage/gambar/{{$laporan->gambar}}" alt="tidak ada gambar" style="height: 200px; width:300px;"></td>
+                              <td>{{$laporan->status_laporan}}</td>
+                            </tr>
+                            @endforeach
+
+                          </tbody>
+                        </table>
+                      </div>
+                    
+
                     </div>
-                  </div>
                 </div>
           </div>
           <!-- /.container-fluid -->
@@ -77,26 +88,6 @@
       <i class="fas fa-angle-up"></i>
     </a>
   
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Yakin untuk logout?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">Terima Kasih atas Kerja Kerasnya</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-info" href="">Logout</a>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -111,4 +102,5 @@
   
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-  @endsection
+    
+@endsection
