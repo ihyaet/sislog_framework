@@ -91,7 +91,7 @@ class LaporanController extends Controller
         ]);
         $laporan->save();
         
-        return view('trc.input_laporan');
+        return view('trc.laporan_sukses');
     }
 
     /**

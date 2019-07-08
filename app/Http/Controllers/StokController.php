@@ -22,9 +22,9 @@ class StokController extends Controller
         $barangs = DB::table('barangs')
         ->select(DB::raw('nama_barang'))
         ->get();
-    return view('pusdalops.input_data',compact(['gudangs','barangs']));
 
-      
+     return view('pusdalops.input_data',compact(['gudangs','barangs']));
+    
     }
     /**
      * Show the form for creating a new resource.
@@ -99,7 +99,8 @@ class StokController extends Controller
             'deskripsi'=>$request->post('deskripsi')
         ]);
         $stok->save();
-        return redirect('/stok');
+        // return redirect('/stok');
+        return view('pusdalops.input_sukses');
        // return view('pusdalops.input_data',compact(['gudangs','barangs']));
     }
 
