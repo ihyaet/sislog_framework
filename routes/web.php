@@ -35,7 +35,7 @@ Route::get ('/', function(){
 Auth::routes();
 
 Route::group(['middleware' => ['web','auth']], function(){
-    Route::get('/',function(){
+    Route::get('/home',function(){
         if (Auth::user()->admin==0){
             return view('trc.input_laporan');
         }else{
@@ -54,5 +54,4 @@ Route::resource('laporan','LaporanController');
 Route::resource('stok','StokController');
 Route::get('/show_stok/{id}','StokController@show_stok')->name('show_stok');
 Route::get('/show_gudang','StokController@show_gudang')->name('show_gudang');
-Route::get('/stok/show/{id}','StokController@show');
 

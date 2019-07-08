@@ -66,12 +66,13 @@
                                    <h6>Tanggal</h6>
                                </div>
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                <input type="text" class="form-control" id="exampleFirstName" placeholder="Kuantitas" name="kuantitas" id="kuantitas">
+                                <input type="number" class="form-control" id="exampleFirstName" placeholder="Kuantitas" name="kuantitas" id="kuantitas">
                             </div>
                             <div class="col-sm-6">
                                 <input type="date" class="form-control" id="exampleLastName" name="kadaluarsa" id="kadaluarsa">
                             </div>
                           </div>
+                          
                           <div class="form-group row">
                               <div class="col-sm-6 mb-3 mb-sm-0">
                                   <h6>Deskripsi</h6>
@@ -106,17 +107,6 @@
 
       </div>
       <!-- End of Main Content -->
-
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
-
     </div>
     <!-- End of Content Wrapper -->
 

@@ -16,7 +16,7 @@ class CreateStoksTable extends Migration
         Schema::create('stoks', function (Blueprint $table) {
             $table->increments('id_stok');
             $table->date('kadaluarsa');
-            $table->string('kuantitas');
+            $table->integer('kuantitas');
             $table->string('deskripsi');
             $table->integer('id_barang');
             $table->integer('id_gudang');

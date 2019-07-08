@@ -31,7 +31,13 @@ class StokController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function show_stok($id, Request $request){
+    public function show_stok($id, Request $req){
+
+        $gudangs = DB::table('gudangs')
+        ->select(DB::raw('nama_gudang'))
+        ->where('id_gudang','=',$id)
+        ->get();
+
         $stoks = DB::table('stoks')
         ->select(DB::raw('*'))
         ->join('barangs','barangs.id_barang','=','stoks.id_barang')
@@ -39,7 +45,7 @@ class StokController extends Controller
         ->where('stoks.id_gudang','=',$id)
         ->get();    
        
-        return view('pusdalops.stok_gudang',compact('stoks'));
+        return view('pusdalops.stok_gudang',compact('stoks','gudangs'));
     }
 
     public function show_gudang()
@@ -47,8 +53,6 @@ class StokController extends Controller
         $gudangs = DB::table('gudangs')
         ->select(DB::raw('gudangs.nama_gudang, gudangs.id_gudang'))
         ->get();
-        
-
         return view('pusdalops.lihat_gudang',compact('gudangs'));
     }
 
@@ -107,14 +111,7 @@ class StokController extends Controller
      */
     public function show($id)
     {
-        $stoks = DB::table('stoks')
-        ->select(DB::raw('*'))
-        ->join('barangs','barangs.id_barang','=','stoks.id_barang')
-        ->select('barangs.nama_barang','barangs.satuan','stoks.*')
-        ->where('stoks.id_gudang','=',$id)
-        ->get();    
        
-        return view('pusdalops.stok_gudang',compact('stoks'));
     }
 
     /**

@@ -36,7 +36,7 @@
                       <div class="card-body">
                         <div class="row no-gutters align-items-center">
                           <div class="col mr-2">
-                          <a href="/stok/show/{{$gudang->id_gudang}}" class="btn"> <div class="h5 mb-0 font-weight-bold text-gray-800">{{$gudang->nama_gudang}}</div></a>
+                          <a href="/show_stok/{{$gudang->id_gudang}}" class="btn"> <div class="h5 mb-0 font-weight-bold text-gray-800">{{$gudang->nama_gudang}}</div></a>
                         </div>
                         </div>
                       </div>
