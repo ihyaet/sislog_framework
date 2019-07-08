@@ -23,7 +23,7 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Input Barang</h1>
+                <h1 class="h3 mb-0 text-gray-800">Input Stok</h1>
                 <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
               </div>
               <div class="card o-hidden border-0 shadow-lg">
@@ -32,7 +32,10 @@
                   <div class="row">
                     <div class="col-lg">
                       <div class="p-5">
-                        <form class="user">
+
+                        
+                        <form class="user" method="post" action="{{ route('stok.store') }}" name="add_stok" id="add_stok" enctype="multipart/form-data">
+                          @csrf
                           <div class="form-group row">
                               <div class="col-sm-6 mb-3 mb-sm-0">
                                   <h6>Gudang</h6>
@@ -41,19 +44,17 @@
                                    <h6>Barang</h6>
                                </div>
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                <select class="form-control" id="sel1">
-                                    <option>Pilih Gudang</option>
-                                    <option>Gudang Pakem</option>
-                                    <option>Gudang Sleman</option>
-                                    <option>Gudang Bantul</option>
+                                <select class="form-control" id="gudang" name="gudang">
+                                  @foreach ($gudangs as $gudang)
+                                    <option>{{$gudang->nama_gudang}}</option>
+                                  @endforeach
                                   </select>
                             </div>
                             <div class="col-sm-6">
-                                <select class="form-control" id="sel1">
-                                    <option>Pilih Barang</option>
-                                    <option>Mie Instan</option>
-                                    <option>Minyak Goreng</option>
-                                    <option>Susu Bayi</option>
+                                <select class="form-control" id="barang" name="barang">
+                                  @foreach ($barangs as $barang)
+                                    <option>{{$barang->nama_barang}}</option>
+                                  @endforeach
                                   </select>
                             </div>
                           </div>
@@ -65,10 +66,10 @@
                                    <h6>Tanggal</h6>
                                </div>
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                <input type="text" class="form-control" id="exampleFirstName" placeholder="Kuantitas">
+                                <input type="text" class="form-control" id="exampleFirstName" placeholder="Kuantitas" name="kuantitas" id="kuantitas">
                             </div>
                             <div class="col-sm-6">
-                                <input type="date" class="form-control" id="exampleLastName">
+                                <input type="date" class="form-control" id="exampleLastName" name="kadaluarsa" id="kadaluarsa">
                             </div>
                           </div>
                           <div class="form-group row">
@@ -79,18 +80,19 @@
                                    <h6>Transaksi</h6>
                                </div>
                               <div class="col-sm-6 mb-3 mb-sm-0">
-                                  <textarea name="" class="form-control" placeholder="Deskripsi"></textarea>
+                                  <textarea name="deskripsi" id="deskripsi" class="form-control" placeholder="Deskripsi"></textarea>
                                </div>
                               <div class="col-sm-6">
-                                  <select class="form-control" id="sel1">
+                                  <select class="form-control" id="transaksi" name="transaksi">
                                       <option>Jenis Transaksi</option>
                                       <option>Masuk</option>
                                       <option>Keluar</option>
                                     </select>
                               </div>
                             </div>
-                          <a href="" class="btn btn-success  btn-block">Submit</a>
+                            <input type="submit" class="btn btn-info btn-block" value="Submit">
                         </form>
+                        
                       </div>
                     </div>
                   </div>

@@ -15,12 +15,11 @@ class CreateGudangsTable extends Migration
     {
         Schema::create('gudangs', function (Blueprint $table) {
             $table->increments('id_gudang');
-            $table->string('deskripsi',80);
+            $table->string('nama_gudang');
+            $table->string('deskripsi',80)->nullable();
             $table->string('alamat_gudang',50);
-            $table->integer('id_barang')->unsigned();
-            $table->integer('id_stok')->unsigned();
+            $table->integer('id_barang')->unsigned()->nullable();
             $table->foreign('id_barang')->references('id_barang')->on('barangs');
-            // $table->foreign('id_stok')->references('id_stok')->on('stoks');
             $table->timestamps();
 
         });

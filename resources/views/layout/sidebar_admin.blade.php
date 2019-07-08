@@ -22,14 +22,14 @@
       <hr class="sidebar-divider">
       <!-- Nav Item Laporan -->
       <li class="nav-item">
-        <a class="nav-link" href="{{route('input_data')}}">
+        <a class="nav-link" href="{{route('stok.index')}}">
              <i class="fa fa-list-alt"></i>
-             <span>Input Data</span></a>
+             <span>Input Stok</span></a>
        </li>
 
          <!-- Nav Item Laporan -->
          <li class="nav-item">
-         <a class="nav-link" href="{{route('lihat_gudang')}}">
+         <a class="nav-link" href="{{route('show_gudang')}}">
               <i class="fa fa-industry"></i>
               <span>Gudang</span></a>
         </li>

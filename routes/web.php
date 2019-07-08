@@ -22,6 +22,8 @@ Route::get('riwayat_masuk', 'pages_controller@riwayat_masuk')->name('riwayat_mas
 Route::get('riwayat_keluar', 'pages_controller@riwayat_keluar')->name('riwayat_keluar');
 Route::get('statistik', 'pages_controller@statistik')->name('statistik');
 
+
+
 // TRC
 Route::get('input_laporan', 'pages_controller@input_laporan')->name('input_laporan');
 Route::get('laporan_trc', 'pages_controller@laporan_trc')->name('laporan_trc');
@@ -33,7 +35,7 @@ Route::get ('/', function(){
 Auth::routes();
 
 Route::group(['middleware' => ['web','auth']], function(){
-    Route::get('/home',function(){
+    Route::get('/',function(){
         if (Auth::user()->admin==0){
             return view('trc.input_laporan');
         }else{
@@ -49,3 +51,8 @@ Route::group(['middleware' => ['web','auth']], function(){
 });
 
 Route::resource('laporan','LaporanController');
+Route::resource('stok','StokController');
+Route::get('/show_stok/{id}','StokController@show_stok')->name('show_stok');
+Route::get('/show_gudang','StokController@show_gudang')->name('show_gudang');
+Route::get('/stok/show/{id}','StokController@show');
+

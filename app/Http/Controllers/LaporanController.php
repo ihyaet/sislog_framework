@@ -17,12 +17,12 @@ class LaporanController extends Controller
     public function index(request $request)
     {
         $mun = Auth::id();
-    
 
         $admin = Auth::user()->admin;
         if($admin==1){
             $laporans = DB::table('laporans')
-            ->select(DB::raw('*'))
+            ->join('users','users.id','=','laporans.id_trc')
+            ->select('laporans.*','users.name')
             ->get();
             return view('pusdalops.laporan_admin',compact('laporans'));
         }else{
@@ -32,6 +32,7 @@ class LaporanController extends Controller
             ->get();
             return view('trc.laporan_trc',compact('laporans'));   
         }
+
     }
 
     /**
@@ -42,7 +43,7 @@ class LaporanController extends Controller
     public function create(request $request)
     {
         // $request->user()->authorizeRole();
-        return view('trc.input_laporan');
+        return view('trc.laporan_trc');
     }
 
     /**
@@ -53,6 +54,12 @@ class LaporanController extends Controller
      */
     public function store(Request $request)
     {
+        $mun = Auth::id();
+        $laporans = DB::table('laporans')
+            ->select(DB::raw('*'))
+            ->where('id_trc',$mun)
+            ->get();
+
         $request->validate([
             'nama_laporan'=>'required',
             'tanggal'=>'required',
@@ -83,6 +90,7 @@ class LaporanController extends Controller
             'gambar'=>$fileNameToStore,
         ]);
         $laporan->save();
+        
         return view('trc.input_laporan');
     }
 

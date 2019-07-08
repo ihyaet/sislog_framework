@@ -28,6 +28,9 @@ class pages_controller extends Controller
     public function lihat_gudang(){
         return view('pusdalops.lihat_gudang');
     }
+    public function show_stok(){
+        return view('pusdalops.show_stok',compact('stoks'));
+    }
     public function input_data(){
         return view('pusdalops.input_data');
     }

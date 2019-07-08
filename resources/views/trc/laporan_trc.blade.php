@@ -48,7 +48,7 @@
                               <td>{{$laporan->jumlah_korban}}</td>
                               <td>{{$laporan->lokasi}}</td>
                               <td>{{$laporan->logistik}}</td>
-                              <td><img class="card-img-top" src="/storage/gambar/{{$laporan->gambar}}" alt="tidak ada gambar" style="height: 200px; width:300px;"></td>
+                              <td><img class="card-img-top" src="/storage/gambar/{{$laporan->gambar}}" alt="tidak ada gambar" style="height: 100px; width:200px;"></td>
                               <td>{{$laporan->status_laporan}}</td>
                             </tr>
                             @endforeach
