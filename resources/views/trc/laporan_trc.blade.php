@@ -49,7 +49,16 @@
                               <td>{{$laporan->lokasi}}</td>
                               <td>{{$laporan->logistik}}</td>
                               <td><img class="card-img-top" src="/storage/gambar/{{$laporan->gambar}}" alt="tidak ada gambar" style="height: 100px; width:200px;"></td>
-                              <td>{{$laporan->status_laporan}}</td>
+                              <td>
+                                  @if ($laporan->status_laporan == 'Diterima')
+                                  <p style="color: green;">{{$laporan->status_laporan}}</p>
+                              @elseif($laporan->status_laporan == 'Ditolak')
+                                  <p style="color: red;">{{$laporan->status_laporan}}</p>
+                              @else
+                                  <p>{{'Diproses'}}</p>
+                              @endif
+                                
+                              </td>
                             </tr>
                             @endforeach
 

@@ -25,5 +25,5 @@
     @yield('content')
 
 </body>
-
+    @yield('chart')
 </html>

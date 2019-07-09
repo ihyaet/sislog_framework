@@ -20,7 +20,7 @@ Route::get('input_data', 'pages_controller@input_data')->name('input_data');
 Route::get('lihat_gudang', 'pages_controller@lihat_gudang')->name('lihat_gudang');
 Route::get('riwayat_masuk', 'pages_controller@riwayat_masuk')->name('riwayat_masuk');
 Route::get('riwayat_keluar', 'pages_controller@riwayat_keluar')->name('riwayat_keluar');
-Route::get('statistik', 'pages_controller@statistik')->name('statistik');
+Route::get('statistik', 'ChartController@index')->name('statistik');
 
 
 
@@ -55,4 +55,5 @@ Route::resource('laporan','LaporanController');
 Route::resource('stok','StokController');
 Route::get('/show_stok/{id}','StokController@show_stok')->name('show_stok');
 Route::get('/show_gudang','StokController@show_gudang')->name('show_gudang');
+
 

@@ -111,9 +111,17 @@ class LaporanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        
+        $status = $request->post('transaksi');
+        $id = $request->post('id_laporan');
+
+        $laporans = DB::table('laporans')
+        ->where('id_laporan',$id)
+        ->update(['status_laporan'=>$status]);
+
+        return redirect('/laporan');
     }
 
     /**
@@ -125,7 +133,19 @@ class LaporanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $laporans = DB::table('laporans')
+        // ->select(DB::raw('id_laporan'))
+        // ->get();
+
+        // $request->validate([
+        //     'status_laporan'=>'required'
+        // ]);
+        // $laporan = new laporan([
+        //     'status_laporan'=>$request->post('status_laporan')
+        // ]);
+        // $laporan->save();
+        // return view('pusdalops.laporan_admin');
+       
     }
 
     /**

@@ -31,12 +31,9 @@
               <h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
             </div> --}}
             <div class="card-body">
-              <div class="chart-bar">
-                <canvas id="myBarChart"></canvas>
-              </div>
-              <hr>
-              Styling for the bar chart can be found in the <code>/js/demo/chart-bar-demo.js</code> file.
+              <div id="chart"></div>
             </div>
+
           </div>
 
         </div>
@@ -45,15 +42,7 @@
       </div>
       <!-- End of Main Content -->
 
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-          
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
+      
 
     </div>
     <!-- End of Content Wrapper -->
@@ -66,24 +55,6 @@
     <i class="fas fa-angle-up"></i>
   </a>
 
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -99,4 +70,50 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+@endsection
+
+@section('chart')
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script>
+    Highcharts.chart('chart', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Laporan Bencana'
+    },
+    xAxis: {
+        categories:{!!json_encode($months)!!},
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Jumlah'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Laporan Diterima',
+        data: {!!json_encode($arrAcc)!!}
+    },
+    {
+        name: 'Laporan Ditolak',
+        data: {!!json_encode($arrDec)!!}
+    }]
+});
+    </script>
 @endsection

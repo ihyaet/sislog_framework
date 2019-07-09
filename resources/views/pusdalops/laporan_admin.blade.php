@@ -49,6 +49,7 @@
                             <th>Gambar</th>
                             <th>Pelapor</th>
                             <th>Status Laporan</th>
+                            <th>Aksi</th>
                           </tr>
                         </thead>  
                         <tbody>
@@ -66,8 +67,21 @@
                             <td>{{$laporan->logistik}}</td>
                             <td><img class="card-img-top" src="/storage/gambar/{{$laporan->gambar}}" alt="tidak ada gambar" style="height: 200px; width:300px;"></td>
                             <th>{{$laporan->name}}</th>
-                            <td>{{$laporan->status_laporan}}</td>
+                            <td>
+                              @if ($laporan->status_laporan == 'Diterima')
+                                  <p style="color: green;">{{$laporan->status_laporan}}</p>
+                              @elseif($laporan->status_laporan == 'Ditolak')
+                                  <p style="color: red;">{{$laporan->status_laporan}}</p>
+                              @else
+                                  <p>{{'Diproses'}}</p>
+                              @endif
+                            
+                            </td>
+                          <td><button type="button" id="verif" class="verif btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-id="{{$laporan->id_laporan}}" href="#exampleModal">
+                                Verifikasi
+                          </button></td>
                           </tr>
+                        {{-- <p>{{$laporan->id_laporan}}</p> --}}
                           @endforeach
 
                         </tbody>
@@ -88,10 +102,40 @@
   </div>
   <!-- End of Page Wrapper -->
 
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
+  <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Verifikasi Laporan</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        <form action="{{route('laporan.edit','4')}}" class="user">
+          @csrf
+                <input type="hidden" name="id_laporan" id="id_laporan" value="">
+                <select class="form-control" id="transaksi" name="transaksi">
+                    <option value="Diterima">Diterima</option>
+                    <option value="Ditolak">Ditolak</option>
+                  </select>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                  <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>  
+            </form>
+     
+
+      </div>
+    </div>
+  </div>
 
 
   <!-- Bootstrap core JavaScript-->
@@ -108,5 +152,13 @@
   <script src="vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
   <script src="js/demo/datatables-demo.js"></script>
+  <script>
+    $('.verif').click(function(){
+      console.log('ss');
+      var id = $(this).data('id');
+      $(".modal-body #id_laporan").val(id);
+     
+    });
+  </script>
 
 @endsection
