@@ -19,7 +19,7 @@ Route::get('lihat_laporan', 'pages_controller@lihat_laporan')->name('lihat_lapor
 Route::get('input_data', 'pages_controller@input_data')->name('input_data');
 Route::get('lihat_gudang', 'pages_controller@lihat_gudang')->name('lihat_gudang');
 Route::get('riwayat_masuk', 'pages_controller@riwayat_masuk')->name('riwayat_masuk');
-Route::get('riwayat_keluar', 'pages_controller@riwayat_keluar')->name('riwayat_keluar');
+Route::get('transaksi_keluar', 'pages_controller@transaksi_keluar')->name('transaksi_keluar');
 Route::get('statistik', 'ChartController@index')->name('statistik');
 
 
@@ -53,7 +53,10 @@ Route::group(['middleware' => ['web','auth']], function(){
 
 Route::resource('laporan','LaporanController');
 Route::resource('stok','StokController');
+Route::resource('keluar','KeluarController');
 Route::get('/show_stok/{id}','StokController@show_stok')->name('show_stok');
 Route::get('/show_gudang','StokController@show_gudang')->name('show_gudang');
+Route::get('/show_keluar','KeluarController@show_keluar')->name('show_keluar');
+
 
 

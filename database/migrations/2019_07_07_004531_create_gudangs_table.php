@@ -20,8 +20,8 @@ class CreateGudangsTable extends Migration
             $table->string('alamat_gudang',50);
             $table->integer('id_barang')->unsigned()->nullable();
             $table->foreign('id_barang')->references('id_barang')->on('barangs');
+            $table->string('prioritas');
             $table->timestamps();
-
         });
     }
 

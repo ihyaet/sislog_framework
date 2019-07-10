@@ -22,14 +22,7 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Heading -->
-          @foreach ($gudangs as $gudang)
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-              <h1 class="h3 mb-0 text-gray-800">{{$gudang->nama_gudang}}</h1>
-              <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
-            </div>
-
-          @endforeach
+        
         <!-- /.container-fluid -->
         <div class="container-fluid">
             <div class="card shadow mb-4">
@@ -39,58 +32,39 @@
                           <thead class="text-center">
                             <tr>
                               <th class="text-center">No</th>
+                              <th>Gudang</th>
                               <th>Nama Barang</th>
                               <th>Satuan</th>
                               <th>Kuantitas</th>
-                              <th>Deskripsi</th>
-                              <th>Kadaluarsa</th>
-                              <th>Pin</th>
+                              <th>Tanggal</th>
                             </tr>
                           </thead>  
-                          <?php $getIndex = 0?>
+                        
                           <tbody>
+
                             {{$i = 1}}
-                            @foreach ($stoks as $stok)
+                            @foreach ($keluars as $keluar)
                             <tr>
                             <td class="text-center">{{$i}}</td>
                             {{$i++}}
-                              <td>{{$stok->nama_barang}}</td>
-                              <td>{{$stok->satuan}}</td>
-                              <td>{{$stok->kuantitas}}</td>
-                              <td>{{$stok->deskripsi}}</td>
-                              <td>{{$stok->kadaluarsa}}</td>
-                              <td class="text-center">
-                                @if ($stok->kuantitas < 40  )
-                                  <i class="fas fa-circle text-danger"></i>
-                                @elseif($stok->kuantitas <= 60 && $stok->kuantitas >=40)
-                                  <i class="fas fa-circle text-warning"></i>
-                                @else
-                                  <i class="fas fa-circle text-success"></i> 
-                                @endif
-                                </td>
-                               
+                              <td>{{$keluar->id_gudang}}</td>
+                              <td>{{$keluar->nama_barang}}</td>
+                              <td>{{$keluar->satuan}}</td>
+                              <td>{{$keluar->kuantitas}}</td>
+                              <td>{{$keluar->kadaluarsa}}</td>
                             </tr>
                             @endforeach
   
-  
                           </tbody>
                         </table>
-
                       </div>
                 </div>
-                
+      
             </div>
   
           </div>
           <!-- /.container-fluid -->
-          @foreach ($gudangs as $gudang)
-          <div class="card shadow mb-4">
-              <div class="card-body">
-              <p>PRIORITAS GUDANG: (  %)</p>
-              {{-- {{$gudang->prioritas}} --}}
-              </div>
-          </div>
-          @endforeach
+  
       </div>
       
 
@@ -99,8 +73,6 @@
 
   </div>
   <!-- End of Page Wrapper -->
-
- <!-- Button trigger modal -->
 
   
   

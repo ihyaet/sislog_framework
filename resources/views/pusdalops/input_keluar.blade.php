@@ -1,4 +1,4 @@
-<title>Input Barang Masuk</title>
+<title>Input Barang Keluar</title>
 @extends('layout.app')
 
 @section('content')
@@ -23,7 +23,7 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Transaksi Masuk</h1>
+                <h1 class="h3 mb-0 text-gray-800">Transaksi Keluar</h1>
                 <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
               </div>
               <div class="card o-hidden border-0 shadow-lg">
@@ -34,7 +34,7 @@
                       <div class="p-5">
 
                         
-                        <form class="user" method="post" action="{{ route('stok.store') }}" name="add_stok" id="add_stok" enctype="multipart/form-data">
+                        <form class="user" method="post" action="{{ route('keluar.store') }}" name="add_stok" id="add_stok" enctype="multipart/form-data">
                           @csrf
                           <div class="form-group row">
                               <div class="col-sm-6 mb-3 mb-sm-0">

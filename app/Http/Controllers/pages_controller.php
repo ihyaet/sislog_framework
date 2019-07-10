@@ -37,8 +37,8 @@ class pages_controller extends Controller
     public function riwayat_masuk(){
         return view('pusdalops.riwayat_masuk');
     }
-    public function riwayat_keluar(){
-        return view('pusdalops.riwayat_keluar');
+    public function transaksi_keluar(){
+        return view('pusdalops.input_keluar');
     }
     public function statistik(){
         return view('pusdalops.statistik');

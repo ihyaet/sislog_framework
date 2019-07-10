@@ -20,12 +20,19 @@
  
       <!-- Divider -->
       <hr class="sidebar-divider">
-      <!-- Nav Item Laporan -->
+
       <li class="nav-item">
-        <a class="nav-link" href="{{route('stok.index')}}">
-             <i class="fa fa-list-alt"></i>
-             <span>Input Stok</span></a>
-       </li>
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#transaksi" aria-expanded="true" aria-controls="collapseUtilities">
+              <i class="fa fa-list-alt"></i>
+            <span>Transaski Stok</span>
+          </a>
+          <div id="transaksi" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="{{route('stok.index')}}">Masuk</a>
+              <a class="collapse-item" href="{{route('keluar.index')}}">Keluar</a>
+            </div>
+          </div>
+        </li>
 
          <!-- Nav Item Laporan -->
          <li class="nav-item">
@@ -50,7 +57,7 @@
           <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
               <a class="collapse-item" href="{{route('riwayat_masuk')}}">Masuk</a>
-              <a class="collapse-item" href="{{route('riwayat_keluar')}}">Keluar</a>
+            <a class="collapse-item" href="{{'show_keluar'}}">Keluar</a>
             </div>
           </div>
         </li>
@@ -60,7 +67,7 @@
         <li class="nav-item">
           <a class="nav-link" href="{{route('statistik')}}">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Statistik</span></a>
+            <span>Statistik Laporan</span></a>
         </li>
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
